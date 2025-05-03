@@ -72,7 +72,7 @@
   <script>
     let cartas = [];
 
-    // Carregar o JSON externo (precisa estar no mesmo diretório ou servir por GitHub Pages)
+    // Carregar o JSON externo
     fetch('cartas.json')
       .then(response => response.json())
       .then(data => cartas = data)
@@ -84,18 +84,27 @@
       const resultado = document.getElementById("resultado");
       resultado.innerHTML = "";
 
-    const filtradas = cartas.filter(c => {
-      const racaOK = raca && c.racas.includes(raca);
-      const propOK = propriedade && c.propriedades.includes(propriedade);
-    
-      return (racaOK || propOK) || (!raca && !propriedade); // mostra tudo se nada selecionado
-    });
+      let porRaca = [];
+      let porPropriedade = [];
 
+      if (raca) {
+        porRaca = cartas.filter(c => c.racas.includes(raca));
+      }
+      if (propriedade) {
+        porPropriedade = cartas.filter(c => c.propriedades.includes(propriedade));
+      }
 
-      if (filtradas.length === 0) {
+      // União sem duplicação
+      const mapa = new Map();
+      [...porRaca, ...porPropriedade].forEach(carta => {
+        mapa.set(carta.id, carta);
+      });
+      const uniao = Array.from(mapa.values());
+
+      if (uniao.length === 0) {
         resultado.innerHTML = "<li>Nenhuma carta encontrada para esta combinação.</li>";
       } else {
-        filtradas.forEach(carta => {
+        uniao.forEach(carta => {
           const item = document.createElement("li");
           item.innerHTML = `<strong>${carta.nome}</strong> [${carta.equipamento}]<br>ID: ${carta.id}<br><em>${carta.bonus}</em>`;
           resultado.appendChild(item);
