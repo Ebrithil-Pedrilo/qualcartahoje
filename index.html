@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartas por Raça e Propriedade – Ragnarok</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #111;
+      color: #eee;
+    }
+    h1 {
+      color: #ffd700;
+    }
+    label, select, button {
+      margin: 0.5rem;
+      font-size: 1.1rem;
+    }
+    ul {
+      margin-top: 1.5rem;
+    }
+    li {
+      background-color: #222;
+      padding: 0.8rem;
+      border: 1px solid #555;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Selecione a Raça e a Propriedade</h1>
+
+  <label for="raca">Raça:</label>
+  <select id="raca">
+    <option value="">--</option>
+    <option value="Demônio">Demônio</option>
+    <option value="Anjo">Anjo</option>
+    <option value="Bruto">Bruto</option>
+    <option value="Doram">Doram</option>
+    <option value="Amorfo">Amorfo</option>
+    <option value="Planta">Planta</option>
+    <option value="Dragão">Dragão</option>
+    <option value="Morto-vivo">Morto-vivo</option>
+    <option value="Inseto">Inseto</option>
+    <option value="Peixe">Peixe</option>
+    <option value="Humanoide">Humanoide</option>
+    <option value="Humano">Humano</option>
+  </select>
+
+  <label for="propriedade">Propriedade:</label>
+  <select id="propriedade">
+    <option value="">--</option>
+    <option value="Fogo">Fogo</option>
+    <option value="Água">Água</option>
+    <option value="Terra">Terra</option>
+    <option value="Vento">Vento</option>
+    <option value="Sagrado">Sagrado</option>
+    <option value="Sombrio">Sombrio</option>
+    <option value="Neutro">Neutro</option>
+    <option value="Fantasma">Fantasma</option>
+    <option value="Maldito">Maldito</option>
+    <option value="Veneno">Veneno</option>
+  </select>
+
+  <button onclick="filtrarCartas()">Buscar cartas</button>
+
+  <ul id="resultado"></ul>
+
+  <script>
+    let cartas = [];
+
+    // Carregar o JSON externo (precisa estar no mesmo diretório ou servir por GitHub Pages)
+    fetch('cartas.json')
+      .then(response => response.json())
+      .then(data => cartas = data)
+      .catch(error => console.error('Erro ao carregar JSON:', error));
+
+    function filtrarCartas() {
+      const raca = document.getElementById("raca").value;
+      const propriedade = document.getElementById("propriedade").value;
+      const resultado = document.getElementById("resultado");
+      resultado.innerHTML = "";
+
+      const filtradas = cartas.filter(c => {
+        const racaOK = !raca || c.racas.includes(raca);
+        const propOK = !propriedade || c.propriedades.includes(propriedade);
+        return racaOK && propOK;
+      });
+
+      if (filtradas.length === 0) {
+        resultado.innerHTML = "<li>Nenhuma carta encontrada para esta combinação.</li>";
+      } else {
+        filtradas.forEach(carta => {
+          const item = document.createElement("li");
+          item.innerHTML = `<strong>${carta.nome}</strong> [${carta.equipamento}]<br>ID: ${carta.id}<br><em>${carta.bonus}</em>`;
+          resultado.appendChild(item);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
