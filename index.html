@@ -84,11 +84,13 @@
       const resultado = document.getElementById("resultado");
       resultado.innerHTML = "";
 
-      const filtradas = cartas.filter(c => {
-        const racaOK = !raca || c.racas.includes(raca);
-        const propOK = !propriedade || c.propriedades.includes(propriedade);
-        return racaOK && propOK;
-      });
+    const filtradas = cartas.filter(c => {
+      const racaOK = raca && c.racas.includes(raca);
+      const propOK = propriedade && c.propriedades.includes(propriedade);
+    
+      return (racaOK || propOK) || (!raca && !propriedade); // mostra tudo se nada selecionado
+    });
+
 
       if (filtradas.length === 0) {
         resultado.innerHTML = "<li>Nenhuma carta encontrada para esta combinação.</li>";
