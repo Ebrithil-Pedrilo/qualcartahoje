@@ -1,0 +1,162 @@
+[
+  {
+    "nome": "Pesar Noturno",
+    "id": 4408,
+    "equipamento": "Armadura",
+    "bonus": "40% a mais de dano em anjo e sagrado, demonio e sombrio",
+    "propriedades": ["Sagrado", "Sombrio"],
+    "racas": ["Anjo", "Demônio"]
+  },
+  {
+    "nome": "Boitatá",
+    "id": 27126,
+    "equipamento": "Armadura",
+    "bonus": "40% a mais de dano em inseto, doram, bruto, vento e terra",
+    "propriedades": ["Vento", "Terra"],
+    "racas": ["Inseto", "Doram", "Bruto"]
+  },
+  {
+    "nome": "Jeweled Ungoliant",
+    "id": 300007,
+    "equipamento": "Armadura",
+    "bonus": "40% de dano a mais em fogo, agua, amorfo e planta",
+    "propriedades": ["Fogo", "Água"],
+    "racas": ["Amorfo", "Planta"]
+  },
+  {
+    "nome": "Bone Detardeurus",
+    "id": 300021,
+    "equipamento": "Armadura",
+    "bonus": "40% dmg em fantasma, maldito e em dragao e morto vivo (racial)",
+    "propriedades": ["Fantasma", "Maldito"],
+    "racas": ["Dragão", "Morto-vivo"]
+  },
+  {
+    "nome": "Gaia Pol",
+    "id": 300445,
+    "equipamento": "Armadura",
+    "bonus": "40% dmg a mais em neutro e terra, planta e humanoide",
+    "propriedades": ["Neutro", "Terra"],
+    "racas": ["Planta", "Humanoide"]
+  },
+  {
+    "nome": "Burning Fang",
+    "id": 300217,
+    "equipamento": "Bota",
+    "bonus": "",
+    "propriedades": [],
+    "racas": []
+  },
+  {
+    "nome": "Old King Groza",
+    "id": 27127,
+    "equipamento": "Bota",
+    "bonus": "Dano físico +10%, dano contra humanoide e dragao +50%",
+    "propriedades": [],
+    "racas": ["Humanoide", "Dragão"]
+  },
+  {
+    "nome": "Broken Thanatos",
+    "id": 300280,
+    "equipamento": "Bota",
+    "bonus": "Aumenta dano físico em humanoide e demonio em 40%",
+    "propriedades": [],
+    "racas": ["Humanoide", "Demônio"]
+  },
+  {
+    "nome": "Goblin King",
+    "id": 300297,
+    "equipamento": "Bota",
+    "bonus": "Atk+10% dano em bruto +35%",
+    "propriedades": [],
+    "racas": ["Bruto"]
+  },
+  {
+    "nome": "Liamette",
+    "id": 300559,
+    "equipamento": "Bota",
+    "bonus": "Atk+8% dano contra peixe +20%",
+    "propriedades": [],
+    "racas": ["Peixe"]
+  },
+  {
+    "nome": "Deus Morroc",
+    "id": 27321,
+    "equipamento": "Bota",
+    "bonus": "Atk da arma +10% dano contra humano, humanoide e anjo +30%",
+    "propriedades": [],
+    "racas": ["Humano", "Humanoide", "Anjo"]
+  },
+  {
+    "nome": "Diligent Pierre",
+    "id": 300234,
+    "equipamento": "Escudo",
+    "bonus": "Ignora def de monstros planta em 15% e aumenta o dano contra planta em 5% a cada 2 refinos (35% total)",
+    "propriedades": [],
+    "racas": ["Planta"]
+  },
+  {
+    "nome": "Giant Caput",
+    "id": 300249,
+    "equipamento": "Acessório",
+    "bonus": "Aumenta o dano em amorfo em 20%",
+    "propriedades": [],
+    "racas": ["Amorfo"]
+  },
+  {
+    "nome": "Dolorian",
+    "id": 300250,
+    "equipamento": "Acessório",
+    "bonus": "Aumenta o dano em demonio em 20%",
+    "propriedades": [],
+    "racas": ["Demônio"]
+  },
+  {
+    "nome": "Playing Pere",
+    "id": 27107,
+    "equipamento": "Acessório",
+    "bonus": "Aumenta o dano em Neutro em 20%",
+    "propriedades": ["Neutro"],
+    "racas": []
+  },
+  {
+    "nome": "Old King Aemss",
+    "id": 27128,
+    "equipamento": "Capacete",
+    "bonus": "Atk +230",
+    "propriedades": [],
+    "racas": []
+  },
+  {
+    "nome": "Engkanto",
+    "id": 4583,
+    "equipamento": "Capacete",
+    "bonus": "Dano físico contra Veneno +30%",
+    "propriedades": ["Veneno"],
+    "racas": []
+  },
+  {
+    "nome": "Gutsy Giearth",
+    "id": 300236,
+    "equipamento": "Capacete",
+    "bonus": "Dano físico contra inseto +4% a cada 2 refinos (24% total)",
+    "propriedades": [],
+    "racas": ["Inseto"]
+  },
+  {
+    "nome": "Heka",
+    "id": 300564,
+    "equipamento": "Capacete",
+    "bonus": "Aumenta dano contra prop água em 12% e +8% se o elmo for +10",
+    "propriedades": ["Água"],
+    "racas": []
+  },
+  {
+    "nome": "Medjay",
+    "id": 300562,
+    "equipamento": "Capacete",
+    "bonus": "Aumenta dano contra prop terra em 12% e +8% se o elmo for +10",
+    "propriedades": ["Terra"],
+    "racas": []
+  }
+]
