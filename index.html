@@ -106,7 +106,7 @@
       } else {
         uniao.forEach(carta => {
           const item = document.createElement("li");
-          item.innerHTML = `<strong>${carta.nome}</strong> [${carta.equipamento}]<br>ID: ${carta.id}<br><em>${carta.bonus}</em>`;
+          item.innerHTML = `<strong><a href="https://historyreborn.net/?module=item&action=view&id=${carta.id}" target="_blank" style="color: #ffd700; text-decoration: none;">${carta.nome}</a></strong> [${carta.equipamento}]<br>ID: ${carta.id}<br><em>${carta.bonus}</em>`;
           resultado.appendChild(item);
         });
       }
